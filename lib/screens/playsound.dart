@@ -11,8 +11,10 @@ class PlaySound extends StatefulWidget {
 class _PlaySoundState extends State<PlaySound> {
   @override
   void initState() {
-    var player = AudioCache();
-    player.play('test.mp3');
+    var player = AudioPlayer();
+    player.play(
+      AssetSource('test.mp3'),
+    );
     // TODO: implement initState
     super.initState();
   }
